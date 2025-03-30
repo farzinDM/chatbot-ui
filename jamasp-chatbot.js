@@ -204,6 +204,7 @@
     border-radius: 12px;
     font-size: 1rem;
     line-height: 1.4;
+    width: fit-content;
     max-width: 300px;
     direction: rtl;
     text-align: justify;
