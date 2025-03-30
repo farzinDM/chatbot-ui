@@ -176,13 +176,25 @@
 }
 
 /* Chatbot Body */
-.chatbot-body {
+.chatbot-body-container{
     margin-top: 60px;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+}
+
+.chatbot-body-container::after{
+    content: " ";
+}
+
+
+.chatbot-body {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     height: 340px;
-    margin-bottom: 8rem;
     overflow-y: scroll;
     scrollbar-width: none;
 }
@@ -269,19 +281,6 @@
     width: 20px;
 }
 
-/* Media Query */
-@media screen and (max-width: 750px) {
-    .chatbot {
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 0;
-    }
-}
-
 /* chatbot start new conversation */
 .new-conversation {
     display: flex;
@@ -327,6 +326,26 @@
     color: gray;
     font-size: 10px;
 }
+
+/* Media Query */
+@media screen and (max-width: 750px) {
+    .chatbot {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+
+    .chatbot-body{
+    height:100%;
+    margin-bottom: 8rem;
+    }
+}
+
+
 
     `;
 
@@ -500,10 +519,12 @@
                 </div>
 
                 <!-- chatbot body -->
+                <div class="chatbot-body-container">
                 <div class="chatbot-body">
                     <!-- <div class="chat bot-chat">
                         سلام، چه کمکی میتونم بهتون بکنم؟
                     </div> -->
+                </div>
                 </div>
 
                 <!-- chatbot footer -->
