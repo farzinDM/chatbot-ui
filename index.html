@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Chatbot</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <!-- Widget Configuration -->
+        <script>
+            window.ChatWidgetConfig = {
+                webhook: {
+                    url: "https://amyrr.app.n8n.cloud/webhook/f406671e-c954-4691-b39a-66c90aa2f103/chat",
+                    route: "general",
+                },
+                branding: {
+                    logo: "./logo.png",
+                    name: "Jamasp.AI", // Your company name
+                    welcomeText: "سلام👋 چطور میتونم بهتون کمک کنم؟", //Welcome message
+                    responseTimeText: "We typically respond right away", //Response time message
+                },
+                style: {
+                    primaryColor: "#1244ce", //Primary color
+                    primaryColorShadow: "#570bad2f", //Primary color shadow
+                    secondaryColor: "#9e09c3", //Secondary color
+                    secondaryColorShadow: "#f725852f", //Secondary color shadow
+                    position: "right", //Position of the widget (left or right)
+                    backgroundColor: "#ffffff", //Background color of the chat widget
+                    fontColor: "#333333", //Text color for messages and interface
+                },
+            };
+        </script>
+        <script src="./jamasp-chatbot.js"></script>
+        <!-- Widget Script -->
+    </body>
+</html>
